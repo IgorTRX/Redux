@@ -9,6 +9,6 @@ export function taskReducer(state, action) {
       return newArray
 
     default:
-      break
+      return state
   }
 }
