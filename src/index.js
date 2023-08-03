@@ -15,15 +15,15 @@ const App = (params) => {
   }, [])
 
   const completeTask = (taskId) => {
-    store.dispatch(actions.taskComplete(taskId))
+    store.dispatch(actions.taskCompleted(taskId))
   }
 
   const changeTitle = (taskId) => {
-    store.dispatch(actions.titleChange(taskId))
+    store.dispatch(actions.titleChanged(taskId))
   }
 
   const deleteTask = (taskId) => {
-    store.dispatch(actions.taskDelete(taskId))
+    store.dispatch(actions.taskDeleted(taskId))
   }
 
   return (

@@ -1,20 +1,20 @@
 import * as actionTypes from './actionTypes'
 
-export function taskComplete(id) {
+export function taskCompleted(id) {
   return {
-    type: actionTypes.taskUpdate,
+    type: actionTypes.taskUpdated,
     payload: { id, completed: true },
   }
 }
-export function titleChange(id) {
+export function titleChanged(id) {
   return {
-    type: actionTypes.taskUpdate,
+    type: actionTypes.taskUpdated,
     payload: { id, title: `New title for ${id}` },
   }
 }
-export function taskDelete(id) {
+export function taskDeleted(id) {
   return {
-    type: actionTypes.taskDelete,
+    type: actionTypes.taskDeleted,
     payload: { id },
   }
 }
