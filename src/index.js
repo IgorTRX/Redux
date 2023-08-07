@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import configureStore from './store/store'
-import { titleChanged, taskDeleted, completeTask } from './store/task'
+import { titleChanged, taskDeleted, completeTask, getTasks } from './store/task'
 
 const store = configureStore()
 
@@ -9,6 +9,7 @@ const App = (params) => {
   const [state, setState] = useState(store.getState())
 
   useEffect(() => {
+    store.dispatch(getTasks())
     store.subscribe(() => {
       setState(store.getState())
     })
@@ -45,7 +46,7 @@ const App = (params) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
 )
