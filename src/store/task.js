@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import todosService from '../services/todos.service'
 
-const initialState = { entities: [], isLoading: true }
+const initialState = { entities: [], isLoading: true, error: null }
 
 const taskSlice = createSlice({
   name: 'task',
